@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle Safe Uganda Initiative - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-circle"></div>
+    </div>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/cycle-safe-logo.png" alt="Cycle Safe Uganda Logo" class="logo-image">
+                <div class="logo-text">Cycle Safe <span>Uganda</span></div>
+            </a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <p class="tagline">Making Her Smile During Her Red Days.</p>
+            <h1>Empowering Girls Through <span>Menstrual Health</span> & Dignity</h1>
+            <p>Cycle Safe Uganda Initiative is a community-based organization dedicated to improving menstrual health and dignity for girls and women in Uganda.</p>
+            <div class="hero-buttons">
+                <a href="about.html" class="btn btn-primary">
+                    <i class="fas fa-arrow-right"></i> Learn More
+                </a>
+                <a href="contact.html" class="btn btn-secondary">
+                    <i class="fas fa-hand-holding-heart"></i> Get Involved
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Girls Reached</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Schools Partnered</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Community Programs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Years of Impact</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="section-header reveal">
+            <h2>Our Strategic Pillars</h2>
+            <p>We focus on long-term, sustainable impact through three core pillars.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <i class="fas fa-gavel"></i>
+                </div>
+                <h3>Legislation & Advocacy</h3>
+                <p>Promoting inclusive policies and advocating for the removal of taxes on menstrual products to make them more affordable.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Coordination</h3>
+                <p>Creating platforms where girls and stakeholders can actively participate in decision-making processes.</p>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Investment</h3>
+                <p>Supporting local production and advocating for dedicated funding for menstrual health initiatives.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Join Us in Making a Difference</h2>
+            <p>Together, we can ensure that no girl is left behind because of menstruation.</p>
+            <a href="contact.html" class="btn">Get Involved</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Cycle Safe Uganda</h4>
+                <p>Making Her Smile During Her Red Days. We are committed to creating sustainable solutions that ensure every girl can manage her menstruation safely, confidently, and with dignity.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Masindi Municipality, Masindi District, Uganda</p>
+                <p><i class="fas fa-phone"></i> 0743152261</p>
+                <p><i class="fas fa-envelope"></i> cyclesafeugandainitiative@gmail.com</p>
+                <p><i class="fas fa-envelope"></i> info@cyclesafeuganda.org</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cycle Safe Uganda Initiative. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.querySelector('.loader').classList.add('hidden');
+        });
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', reveal);
+        
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

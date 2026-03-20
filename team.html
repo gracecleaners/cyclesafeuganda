@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Cycle Safe Uganda Initiative</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #fff 50%, #e0f2f1 100%);
+            padding: 12rem 5% 4rem;
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        
+        .team-section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .team-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+        }
+        
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        
+        .team-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary-light), #e0f2f1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .team-image::after {
+            content: '\f007';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 5rem;
+            color: var(--primary);
+            opacity: 0.3;
+        }
+        
+        .team-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .team-info h3 {
+            color: var(--dark);
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .team-info .role {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        
+        .team-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .team-card:hover .team-image {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        .team-card:hover .team-image::after {
+            color: white;
+            opacity: 0.5;
+        }
+        
+        .location-section {
+            background: var(--light);
+            padding: 5rem 5%;
+            text-align: center;
+        }
+        
+        .location-box {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+        
+        .location-box i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .location-box h3 {
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .location-box p {
+            color: var(--gray);
+        }
+    </style>
+</head>
+<body>
+    <div class="loader"><div class="loader-circle"></div></div>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/cycle-safe-logo.png" alt="Cycle Safe Uganda Logo" class="logo-image">
+                <div class="logo-text">Cycle Safe <span>Uganda</span></div>
+            </a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="team.html" class="active">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>Our Leadership</h1>
+        <p>Meet the dedicated team driving change in menstrual health</p>
+    </div>
+
+    <section class="team-section">
+        <div class="team-grid">
+            <div class="team-card reveal">
+                <div class="team-image"></div>
+                <div class="team-info">
+                    <h3>Taban Sadat</h3>
+                    <p class="role">Founder / Team Lead</p>
+                    <p>Provides overall leadership, strategic direction, and partnership development.</p>
+                </div>
+            </div>
+
+            <div class="team-card reveal">
+                <div class="team-image"></div>
+                <div class="team-info">
+                    <h3>Yanya Patience</h3>
+                    <p class="role">Admin & Finance Manager</p>
+                    <p>Oversees financial management and administrative operations.</p>
+                </div>
+            </div>
+
+            <div class="team-card reveal">
+                <div class="team-image"></div>
+                <div class="team-info">
+                    <h3>Natumanya Confidence</h3>
+                    <p class="role">Volunteer & Outreach Manager</p>
+                    <p>Coordinates volunteers and leads community outreach programs.</p>
+                </div>
+            </div>
+
+            <div class="team-card reveal">
+                <div class="team-image"></div>
+                <div class="team-info">
+                    <h3>Miriam Adyero</h3>
+                    <p class="role">Monitoring & Evaluation Manager</p>
+                    <p>Oversees data collection, program monitoring, and impact evaluation.</p>
+                </div>
+            </div>
+
+            <div class="team-card reveal">
+                <div class="team-image"></div>
+                <div class="team-info">
+                    <h3>Opio Geofrey</h3>
+                    <p class="role">Programs Manager</p>
+                    <p>Leads the planning and implementation of organizational programs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location-section">
+        <div class="section-header reveal">
+            <h2>Our Location</h2>
+        </div>
+        <div class="location-box reveal">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Head Office</h3>
+            <p>Masindi Municipality, Masindi District, Uganda</p>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Work With Us</h2>
+            <p>Join our team and help transform menstrual health in Uganda.</p>
+            <a href="contact.html" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Cycle Safe Uganda</h4>
+                <p>Making Her Smile During Her Red Days.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Masindi Municipality, Uganda</p>
+                <p><i class="fas fa-phone"></i> 0743152261</p>
+                <p><i class="fas fa-envelope"></i> cyclesafeugandainitiative@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cycle Safe Uganda Initiative. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('load', () => document.querySelector('.loader').classList.add('hidden'));
+        window.addEventListener('scroll', () => document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50));
+        function toggleMenu() { document.getElementById('nav-menu').classList.toggle('active'); }
+        window.addEventListener('scroll', reveal);
+        function reveal() {
+            document.querySelectorAll('.reveal').forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight - 150) el.classList.add('active');
+            });
+        }
+    </script>
+</body>
+</html>

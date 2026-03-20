@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Cycle Safe Uganda Initiative</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #fff 50%, #e0f2f1 100%);
+            padding: 12rem 5% 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23e91e63" opacity="0.1"/></svg>') repeat;
+            background-size: 30px 30px;
+            animation: moveBackground 20s linear infinite;
+        }
+        
+        @keyframes moveBackground {
+            from { background-position: 0 0; }
+            to { background-position: 30px 30px; }
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .about-content {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+        
+        .about-section.reverse {
+            direction: rtl;
+        }
+        
+        .about-section.reverse > * {
+            direction: ltr;
+        }
+        
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            position: relative;
+        }
+        
+        .about-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .about-text p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            position: relative;
+        }
+        
+        .about-image::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 3px solid var(--primary);
+            border-radius: 15px;
+            opacity: 0.3;
+            animation: borderPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes borderPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .quote-box {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quote-box::before {
+            content: '"';
+            font-size: 8rem;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            opacity: 0.2;
+            font-family: serif;
+        }
+        
+        .quote-box p {
+            font-size: 1.3rem;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .challenges {
+            padding: 5rem 5%;
+            background: var(--light);
+        }
+        
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .challenge-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+        
+        .challenge-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+        
+        .challenge-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+        
+        .challenge-card:hover .challenge-icon {
+            background: var(--primary);
+            color: white;
+            transform: rotate(360deg);
+        }
+        
+        .challenge-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .challenge-card p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+        
+        @media (max-width: 968px) {
+            .about-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-section.reverse {
+                direction: ltr;
+            }
+            
+            .page-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-circle"></div>
+    </div>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/cycle-safe-logo.png" alt="Cycle Safe Uganda Logo" class="logo-image">
+                <div class="logo-text">Cycle Safe <span>Uganda</span></div>
+            </a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <h1>About Us</h1>
+        <p>Learn about our mission, vision, and the work we do to empower girls and women in Uganda.</p>
+    </div>
+
+    <section class="about-content">
+        <div class="about-section reveal">
+            <div class="about-text">
+                <h2>Who We Are</h2>
+                <p>Cycle Safe Uganda Initiative is a registered Community-Based Organization (CBO) under the NGO Act 2016 (Registration No: CBS/441/2025), based in Masindi Municipality, Uganda.</p>
+                <p>We work to address systemic barriers that limit access to menstrual health support, particularly for girls and women in underserved communities. We are committed to creating sustainable solutions that ensure every girl can manage her menstruation safely, confidently, and with dignity.</p>
+            </div>
+            <div class="about-image">
+                <img src="images/okumu1.png" alt="Team meeting" decoding="async">
+            </div>
+        </div>
+
+        <div class="quote-box reveal">
+            <p>"Girls are written into the SDGs but written out of the budgets. We are here to change that."</p>
+        </div>
+
+        <div class="about-section reverse reveal">
+            <div class="about-text">
+                <h2>Our Vision</h2>
+                <p>A society where menstrual health is a fundamental right, not a privilege. We believe that every girl deserves access to the resources, education, and support she needs to manage her menstruation with dignity and confidence.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600" alt="Vision" loading="lazy" decoding="async">
+            </div>
+        </div>
+
+        <div class="about-section reveal">
+            <div class="about-text">
+                <h2>Our Mission</h2>
+                <p>To champion menstrual health equity through education, advocacy, and resource mobilization, empowering communities to claim their right to dignity, health, and equality.</p>
+                <p>We are working to ensure that no girl is left behind because of menstruation.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140840e?w=600" alt="Mission" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </section>
+
+    <section class="challenges">
+        <div class="section-header reveal">
+            <h2>The Challenge</h2>
+            <p>Why we exist - addressing critical gaps in menstrual health</p>
+        </div>
+        <div class="challenges-grid">
+            <div class="challenge-card reveal">
+                <div class="challenge-icon">
+                    <i class="fas fa-hospital"></i>
+                </div>
+                <h3>Health Gap</h3>
+                <p>Menstrual health is often excluded from primary healthcare systems, leaving many girls without the medical support they need.</p>
+            </div>
+            <div class="challenge-card reveal">
+                <div class="challenge-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+                <h3>Education Gap</h3>
+                <p>Schools often lack proper WASH facilities and trained staff to support menstruating students, leading to missed school days.</p>
+            </div>
+            <div class="challenge-card reveal">
+                <div class="challenge-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3>Rights Gap</h3>
+                <p>Policies often exclude girls' voices, and menstrual products remain unaffordable due to taxation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Join Our Mission</h2>
+            <p>Be part of the movement to transform menstrual health in Uganda.</p>
+            <a href="contact.html" class="btn">Get Involved</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Cycle Safe Uganda</h4>
+                <p>Making Her Smile During Her Red Days.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Masindi Municipality, Uganda</p>
+                <p><i class="fas fa-phone"></i> 0743152261</p>
+                <p><i class="fas fa-envelope"></i> cyclesafeugandainitiative@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cycle Safe Uganda Initiative. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loader = document.querySelector('.loader');
+            if (loader) {
+                loader.classList.add('hidden');
+            }
+        });
+
+        // Fallback in case DOMContentLoaded is delayed by browser quirks.
+        setTimeout(() => {
+            const loader = document.querySelector('.loader');
+            if (loader && !loader.classList.contains('hidden')) {
+                loader.classList.add('hidden');
+            }
+        }, 1200);
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', reveal);
+        
+        function reveal() {
+            var reveals = document.querySelectorAll('.reveal');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
