@@ -128,10 +128,208 @@
             font-size: 0.9rem;
         }
         
+        /* Support a Girl Section */
+        .support-section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .stat-item {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #f0e6f1 100%);
+            padding: 2.5rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--primary);
+            transition: var(--transition);
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(233, 30, 99, 0.15);
+        }
+        
+        .stat-item h4 {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .stat-item p {
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .impact-text {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--secondary);
+        }
+        
+        .impact-text h3 {
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .impact-text p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .support-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            border-top: 4px solid var(--primary);
+            transition: var(--transition);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        
+        .support-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(233, 30, 99, 0.2);
+        }
+        
+        .support-card h3 {
+            color: var(--dark);
+            margin: 1rem 0;
+            font-size: 1.3rem;
+        }
+        
+        .support-card p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        .support-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+        
+        .donor-message {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 4rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .donor-message::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .donor-message-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .donor-message h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .donor-message p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+        
+        .donor-message .btn {
+            background: white;
+            color: var(--primary);
+            margin-top: 2rem;
+        }
+        
+        .donor-message .btn:hover {
+            background: var(--light);
+            transform: scale(1.05);
+        }
+
+        .program-videos {
+            padding: 5rem 5% 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .program-video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.6rem;
+        }
+
+        .program-video-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 1rem;
+            box-shadow: 0 14px 40px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .program-video-card video {
+            width: 100%;
+            border-radius: 14px;
+            background: #000;
+            display: block;
+            max-height: 420px;
+        }
+
+        .program-video-card p {
+            color: var(--gray);
+            margin: 0.75rem 0 0.2rem;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
         @media (max-width: 768px) {
             .objective-card {
                 grid-template-columns: 1fr;
                 text-align: center;
+            }
+
+            .program-video-grid {
+                grid-template-columns: 1fr;
             }
             
             .objective-number {
@@ -158,9 +356,11 @@
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="programs.html" class="active">Programs</a></li>
                     <li><a href="team.html">Team</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <a href="#support" class="nav-donate-btn"><i class="fas fa-heart"></i> Donate</a>
         </div>
     </header>
 
@@ -208,6 +408,128 @@
             <div class="objective-content">
                 <h3>Advocate for Policy Change</h3>
                 <p>Influence policies to prioritize menstrual health and allocate adequate resources.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="program-videos">
+        <div class="section-header reveal">
+            <h2>Program Videos</h2>
+            <p>Two stories showing our outreach and menstrual health education in action.</p>
+        </div>
+        <div class="program-video-grid">
+            <div class="program-video-card reveal">
+                <video controls preload="metadata">
+                    <source src="video/VID-20251020-WA0027.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <p>School outreach and engagement session with students.</p>
+            </div>
+            <div class="program-video-card reveal">
+                <video controls preload="metadata">
+                    <source src="video/VID-20251106-WA0040.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <p>Community-centered menstrual health awareness and support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Images Section -->
+    <section class="featured-images">
+        <div class="section-header reveal">
+            <h2>Our Work in Action</h2>
+            <p>Meet the girls and communities we serve</p>
+        </div>
+        <div class="featured-grid reveal">
+            <div class="featured-image-card">
+                <img src="images/11.jpg" alt="Community workshop" decoding="async" />
+                <div class="image-caption">
+                    <h3>Community Workshops</h3>
+                    <p>Bringing education and support directly to girls and women</p>
+                </div>
+            </div>
+            <div class="featured-image-card">
+                <img src="images/5.jpg" alt="Girls engagement" decoding="async" loading="lazy" />
+                <div class="image-caption">
+                    <h3>Engaging Girls</h3>
+                    <p>Creating safe spaces for learning and empowerment</p>
+                </div>
+            </div>
+            <div class="featured-image-card">
+                <img src="images/12.jpg" alt="School programs" decoding="async" loading="lazy" />
+                <div class="image-caption">
+                    <h3>School Programs</h3>
+                    <p>Breaking stigma and building supportive environments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support a Girl Section -->
+    <section class="support-section" id="support">
+        <div class="section-title reveal">
+            <h2>Support a Girl</h2>
+            <p>Transform lives through menstrual health and dignity</p>
+        </div>
+
+        <div class="impact-text reveal">
+            <h3>The Crisis: Why Your Support Matters</h3>
+            <p><strong>Across Sub-Saharan Africa,</strong> it is estimated that <strong>1 in 10 girls</strong> miss school during their periods, which can account for up to 20% of a given school year. In East Africa, the challenges are equally steep, with studies showing that approximately <strong>31% of menstruating students</strong> report missing school days due to a lack of resources and high levels of stigma.</p>
+        </div>
+
+        <div class="impact-stats">
+            <div class="stat-item reveal">
+                <h4>23%</h4>
+                <p>of girls between ages 12-18 drop out of school entirely after they begin menstruating</p>
+            </div>
+            <div class="stat-item reveal">
+                <h4>2-5 Days/Month</h4>
+                <p>Girls miss an average of 2 to 5 school days each month, falling behind their peers</p>
+            </div>
+            <div class="stat-item reveal">
+                <h4>1 in 10</h4>
+                <p>Across Sub-Saharan Africa, girls miss school during their periods</p>
+            </div>
+        </div>
+
+        <div class="impact-text reveal">
+            <p>Your donation helps these girls manage their menstruation with dignity and ensures they don't have to choose between their health and their education.</p>
+        </div>
+
+        <div class="section-title reveal" style="margin-top: 4rem;">
+            <h2>How You Can Help</h2>
+        </div>
+
+        <div class="support-grid">
+            <div class="support-card reveal">
+                <i class="fas fa-layer-group"></i>
+                <h3>Reusable Sanitary Pads</h3>
+                <p>Provide girls with safe, high-quality reusable pads that last for several months, removing the monthly financial barrier to staying in school.</p>
+            </div>
+            <div class="support-card reveal">
+                <i class="fas fa-book"></i>
+                <h3>Menstrual Health Education</h3>
+                <p>Support school and community sessions that teach girls about their bodies, reproductive health, and hygiene, breaking the cycle of shame.</p>
+            </div>
+            <div class="support-card reveal">
+                <i class="fas fa-gift"></i>
+                <h3>Dignity Kits</h3>
+                <p>Supply essential kits containing reusable pads, underwear, soap, and hygiene guides to help girls manage their periods safely and privately.</p>
+            </div>
+            <div class="support-card reveal">
+                <i class="fas fa-school"></i>
+                <h3>School Outreach Programs</h3>
+                <p>Enable awareness programs that engage teachers and boys to create a supportive, stigma-free environment for every girl.</p>
+            </div>
+        </div>
+
+        <div class="donor-message reveal">
+            <div class="donor-message-content">
+                <h3>Your Support Changes Stories</h3>
+                <p>By donating, you help a girl stay in school, protect her dignity, and build a healthier, more equitable future.</p>
+                <p><strong>Together, we can ensure that no girl is left behind because of a natural part of life.</strong></p>
+                <a href="contact.html" class="btn">Make a Donation</a>
             </div>
         </div>
     </section>
@@ -283,7 +605,20 @@
     </footer>
 
     <script>
-        window.addEventListener('load', () => document.querySelector('.loader').classList.add('hidden'));
+        document.addEventListener('DOMContentLoaded', () => {
+            const loader = document.querySelector('.loader');
+            if (loader) {
+                loader.classList.add('hidden');
+            }
+        });
+
+        setTimeout(() => {
+            const loader = document.querySelector('.loader');
+            if (loader && !loader.classList.contains('hidden')) {
+                loader.classList.add('hidden');
+            }
+        }, 1200);
+
         window.addEventListener('scroll', () => document.querySelector('header').classList.toggle('scrolled', window.scrollY > 50));
         function toggleMenu() { document.getElementById('nav-menu').classList.toggle('active'); }
         window.addEventListener('scroll', reveal);
